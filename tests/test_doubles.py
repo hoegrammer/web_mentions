@@ -1,6 +1,5 @@
 from SearchAdaptorBase import SearchAdaptorBase
 from StorageWriterBase import StorageWriterBase
-import typing
 
 class StorageAdaptorSpy(StorageWriterBase):
     stored = []
@@ -10,6 +9,7 @@ class StorageAdaptorSpy(StorageWriterBase):
         self.stored = webmention_collection 
 
 class SearchAdaptorStub(SearchAdaptorBase): 
+    data: list[dict[str,str]]
 
     def gather(self) -> list[dict[str,str]] :
         return self.data

@@ -1,4 +1,3 @@
-from pytest import *
 from WebMentionApp import WebMentionApp
 from test_doubles import SearchAdaptorStub, StorageAdaptorSpy
 
