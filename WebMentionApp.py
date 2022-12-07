@@ -1,4 +1,3 @@
-import typing
 from SearchAdaptorBase import SearchAdaptorBase
 from StorageWriterBase import StorageWriterBase
 
@@ -10,6 +9,6 @@ class WebMentionApp:
 
     def gather_and_store(self):
 
-        search_data = self.searchAdaptor.gather()
+        search_data: list[dict[str,str]] = self.searchAdaptor.gather()
         self.storageWriter.store(search_data)
 

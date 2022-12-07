@@ -1,5 +1,3 @@
-from WebMentionApp import WebMentionApp
-from test_doubles import SearchAdaptorStub, StorageAdaptorSpy
 
 
 sample_search = [{
@@ -20,14 +18,3 @@ sample_search = [{
         "summary": "This one is terrible.",
         "url": "https://www.someothersite.cn/"
     }]
-
-def test_gather_collate_store_webmentions ():
-    spy = StorageAdaptorSpy()
-    searchAdaptor = SearchAdaptorStub()
-    searchAdaptor.data = sample_search
-    app = WebMentionApp(searchAdaptor, spy)
-    app.gather_and_store()
-    assert spy.stored == sample_search
-
-
-

@@ -3,6 +3,6 @@ import abc
 class SearchAdaptorBase:
     
     @abc.abstractmethod
-    def fetch(self):
+    def gather(self) -> list[dict[str,str]]:
         return
 
