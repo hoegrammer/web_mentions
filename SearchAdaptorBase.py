@@ -1,8 +1,10 @@
 import abc
 
-class SearchAdaptorBase:
-    
-    @abc.abstractmethod
-    def gather(self) -> list[dict[str,str]]:
-        return
+from WebMention import WebMention
 
+
+class SearchAdaptorBase:
+
+    @abc.abstractmethod
+    def gather(self) -> list[WebMention]:
+        pass
